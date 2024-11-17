@@ -8,10 +8,13 @@ module.exports = {
         'white': '#ffffff',
         'dkRed': '#560000',
         'dkGreen': '#293938',
+        'rdGray': '#9A6767'
     },
     minHeight: {
       'section': '25rem',
       'header': '40rem',
+      'cards': '25rem',
+      'smCard': '10rem',
     },
     extend: {
       fontFamily: {
