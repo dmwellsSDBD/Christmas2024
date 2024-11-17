@@ -118,7 +118,7 @@
           </div>
         </div>
       </nav>
-    <header class="bg-[url('img/hero-index.jpg')] bg-cover bg-center bg-no-repeat min-h-header bg-green flex flex-col justify-center items-center">
+    <header class="bg-[url('img/hero-index.jpg')] bg-cover bg-center bg-no-repeat min-h-mobile lg:min-h-header bg-green flex flex-col justify-center items-center">
       <h1 class="font-xmas1 text-6xl sm:text-7xl lg:text-9xl font-bold text-white mx-auto uppercase drop-shadow-lg">
         Christmas 2024
       </h1>
@@ -128,9 +128,15 @@
     </header>
 
     <main class="bg-gradient-to-t from-green to-dkGreen min-h-header p-9">
-      <div class="grid grid-cols-3 gap-4">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
         <div class="bg-gradient-to-br from-red to-rdGray p-6 min-h-cards rounded-lg">01</div>
-        <div class="bg-gradient-to-br from-red to-rdGray p-6 min-h-cards rounded-lg">02</div>
+        <div class="bg-gradient-to-br from-red to-rdGray min-h-cards rounded-lg">
+          <div class="grid grid-cols-subgrid gap-4 col-span-3 bg-white rounded-lg min-h-smCard">
+            <div class="text-9xl bg-[url('img/streetLight.jpg')] bg-cover rounded-t-lg">
+              <h2 class="text-4xl text-white my-">Street Lamp</h2>
+            </div>
+          </div>
+        </div>
         <div class="bg-gradient-to-br from-red to-rdGray p-6 min-h-cards rounded-lg">03</div>
         <div class="bg-gradient-to-br from-red to-rdGray p-6 min-h-cards rounded-lg">04</div>
         <div class="bg-gradient-to-br from-red to-rdGray p-6 min-h-cards rounded-lg">05</div>
@@ -139,7 +145,7 @@
         <div class="bg-gradient-to-br from-red to-rdGray p-6 min-h-cards rounded-lg">08</div>
         <div class="bg-gradient-to-br from-red to-rdGray p-6 min-h-cards rounded-lg">
           <div class="grid grid-cols-subgrid gap-4 col-span-3 bg-white rounded-lg min-h-smCard">
-            <div class="col-start-2 text-9xl">
+            <div class="text-9xl">
               <i class="fa-solid fa-gift"></i>
             </div>
           </div>
