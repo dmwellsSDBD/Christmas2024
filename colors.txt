@@ -1,0 +1,19 @@
+bright red:  #800000 -- "red"
+        hsl: 0, 100, 25
+        rgb: 128, 0, 0
+
+green bright: #4A817B  -- "green"
+        hsl: 173, 27, 40
+        rgb: 74, 129, 123
+
+white: #ffffff  -- "white"
+        hsl: 0, 0, 100
+        rgb: 255, 255, 255
+
+dark red: #560000  -- "dkRed"
+        hsl: 0, 100, 17
+        rgb: 86, 0, 0
+
+dark green: #293938  -- "dkGreen"
+        hsl: 176, 16, 19
+        rgb: 41, 57, 56
