@@ -22,15 +22,19 @@
           <div class="relative flex h-24 items-center justify-between">
             <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
               <!-- Mobile menu button-->
-              <button type="button" class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
+              <button type="button" id="show-menu" class="relative inline-flex items-center justify-center rounded-md 
+                                            p-2 text-white hover:bg-gray-700 hover:text-green focus:outline-none focus:ring-2 
+                                            focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
                 <span class="absolute -inset-0.5"></span>
                 <span class="sr-only">Open main menu</span>
                 <!--
                   Icon when menu is closed.
       
                   Menu open: "hidden", Menu closed: "block"
+
+                  This is the Hamburger SVG
                 -->
-                <svg class="block size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+                <svg id="hamburger" class="block size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
                 </svg>
                 <!--
@@ -38,14 +42,16 @@
       
                   Menu open: "block", Menu closed: "hidden"
                 -->
-                <svg class="hidden size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+                <svg id="closeX" class="hidden size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
                 </svg>
               </button>
             </div>
+
+            <!--============= NAV BAR ====================-->
             <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
               <!-- <div class="flex shrink-0 items-center">
-                <!-- <img class="h-8 w-auto" src="https://tailwindui.com/plus/img/logos/mark.svg?color=indigo&shade=500" alt="Your Company">
+                <!- <img class="h-8 w-auto" src="https://tailwindui.com/plus/img/logos/mark.svg?color=indigo&shade=500" alt="Your Company">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6 text-green hover:text-dkGreen">
                   <path d="M9.375 3a1.875 1.875 0 0 0 0 3.75h1.875v4.5H3.375A1.875 1.875 0 0 1 1.5 9.375v-.75c0-1.036.84-1.875 1.875-1.875h3.193A3.375 3.375 0 0 1 12 2.753a3.375 3.375 0 0 1 5.432 3.997h3.943c1.035 0 1.875.84 1.875 1.875v.75c0 1.036-.84 1.875-1.875 1.875H12.75v-4.5h1.875a1.875 1.875 0 1 0-1.875-1.875V6.75h-1.5V4.875C11.25 3.839 10.41 3 9.375 3ZM11.25 12.75H3v6.75a2.25 2.25 0 0 0 2.25 2.25h6v-9ZM12.75 12.75v9h6.75a2.25 2.25 0 0 0 2.25-2.25v-6.75h-9Z" />
                 </svg>
@@ -66,58 +72,32 @@
               </div>
             </div>
             <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-              <button type="button" class="relative rounded-full bg-white hover:bg-dkGreen p-3">
-                <!-- <span class="absolute -inset-1.5"></span>
-                <span class="sr-only">View notifications</span> -->
-                <!-- <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M14.857 17.082a23.848 23.848 0 0 0 5.454-1.31A8.967 8.967 0 0 1 18 9.75V9A6 6 0 0 0 6 9v.75a8.967 8.967 0 0 1-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 0 1-5.714 0m5.714 0a3 3 0 1 1-5.714 0" />
-                </svg> -->
-                <span class="font-xmas3 text-lg text-green hover:text-white p-5 rounded-full font-bold">Santa Tracker <i class="fa-solid fa-sleigh text-green"></i></span>
-                
-              </button>
-      
-              <!-- Profile dropdown -->
-              <!--<div class="relative ml-3"> 
-                <div>
-                  <button type="button" class="relative flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800" id="user-menu-button" aria-expanded="false" aria-haspopup="true">
-                    <span class="absolute -inset-1.5"></span>
-                    <span class="sr-only">Open user menu</span>
-                    <img class="size-8 rounded-full" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
-                  </button>
-                </div> -->
-      
-                <!--
-                  Dropdown menu, show/hide based on menu state.
-      
-                  Entering: "transition ease-out duration-100"
-                    From: "transform opacity-0 scale-95"
-                    To: "transform opacity-100 scale-100"
-                  Leaving: "transition ease-in duration-75"
-                    From: "transform opacity-100 scale-100"
-                    To: "transform opacity-0 scale-95"
-
-                <div class="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black/5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1">
-                  Active: "bg-gray-100 outline-none", Not Active: "" 
-                  <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-0">Your Profile</a>
-                  <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-1">Settings</a>
-                  <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-2">Sign out</a>
-                </div>-->
+              <a href="https://santatracker.google.com/" target="_blank">
+                <button type="button" class="relative rounded-full bg-white hover:bg-dkGreen p-3">
+                  <span class="font-xmas3 text-lg text-green hover:text-white p-5 rounded-full font-bold">
+                    Santa Tracker <i class="fa-solid fa-sleigh text-green"></i>
+                  </span>
+                  
+                </button>
+              </a>
               </div>
             </div>
           </div>
         </div>
       
         <!-- Mobile menu, show/hide based on menu state. -->
-        <div class="sm:hidden" id="mobile-menu">
+        <div class="hidden sm:hidden mobile-menu" id="mobile-menu">
           <div class="space-y-1 px-2 pb-3 pt-2">
             <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-            <a href="#" class="block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white" aria-current="page">Dashboard</a>
-            <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Team</a>
-            <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Projects</a>
-            <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Calendar</a>
+            <a href="#" class="block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white hover:text-green" aria-current="page">Home</a>
+            <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-white hover:bg-gray-700 hover:text-green">Team</a>
+            <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-white hover:bg-gray-700 hover:text-green">Projects</a>
+            <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-white hover:bg-gray-700 hover:text-green">Calendar</a>
           </div>
         </div>
       </nav>
+
+    <!--######################### HEADER SECTION ###############################-->  
     <header class="bg-[url('img/hero-index.jpg')] bg-cover bg-center bg-no-repeat min-h-mobile lg:min-h-header bg-green flex flex-col justify-center items-center">
       <h1 class="font-xmas1 text-6xl sm:text-7xl lg:text-9xl font-bold text-white mx-auto uppercase drop-shadow-lg">
         Christmas 2024
@@ -129,33 +109,86 @@
 
     <main class="bg-gradient-to-t from-green to-dkGreen min-h-header p-9">
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-        <div class="bg-gradient-to-br from-red to-rdGray p-6 min-h-cards rounded-lg">01</div>
-        <div class="bg-gradient-to-br from-red to-rdGray min-h-cards rounded-lg">
-          <div class="grid grid-cols-subgrid gap-4 col-span-3 bg-white rounded-lg min-h-smCard">
-            <div class="text-9xl bg-[url('img/streetLight.jpg')] bg-cover rounded-t-lg">
-              <h2 class="text-4xl text-white my-">Street Lamp</h2>
+
+        <!-- ################# MEDIA CARDS #######################-->
+        <div class="min-h-cards rounded-lg bg-[url('img/acoustic.jpg')] bg-cover bg-bottom">
+          <div class="grid grid-cols-subgrid gap-4 col-span-3 rounded-t-lg min-h-smCard">
+            <div class="my-8">
+              <h2 class="mx-auto font-xmas3 uppercase text-4xl text-green bg-whiteOp p-6">Acoustic Guitar</h2>
             </div>
           </div>
         </div>
-        <div class="bg-gradient-to-br from-red to-rdGray p-6 min-h-cards rounded-lg">03</div>
-        <div class="bg-gradient-to-br from-red to-rdGray p-6 min-h-cards rounded-lg">04</div>
-        <div class="bg-gradient-to-br from-red to-rdGray p-6 min-h-cards rounded-lg">05</div>
-        <div class="bg-gradient-to-br from-red to-rdGray p-6 min-h-cards rounded-lg">06</div>
-        <div class="bg-gradient-to-br from-red to-rdGray p-6 min-h-cards rounded-lg">07</div>
-        <div class="bg-gradient-to-br from-red to-rdGray p-6 min-h-cards rounded-lg">08</div>
-        <div class="bg-gradient-to-br from-red to-rdGray p-6 min-h-cards rounded-lg">
-          <div class="grid grid-cols-subgrid gap-4 col-span-3 bg-white rounded-lg min-h-smCard">
-            <div class="text-9xl">
-              <i class="fa-solid fa-gift"></i>
+
+        <div class="min-h-cards rounded-lg bg-[url('img/amp.jpg')] bg-cover bg-bottom">
+          <div class="grid grid-cols-subgrid gap-4 col-span-3 rounded-t-lg min-h-smCard">
+            <div class="my-8">
+              <h2 class="mx-auto font-xmas3 uppercase text-4xl text-green bg-whiteOp p-6 ">Guitar Amp</h2>
             </div>
           </div>
+        </div>
+
+        <div class="min-h-cards rounded-lg bg-[url('img/cymbal.jpg')] bg-cover">
+          <div class="grid grid-cols-subgrid gap-4 col-span-3 rounded-t-lg min-h-smCard">
+            <div class="my-8">
+              <h2 class="mx-auto font-xmas3 uppercase text-4xl text-green bg-whiteOp p-6 ">Sabian 20" Crash</h2>
+            </div>
+          </div>
+        </div>
+
+        <div class="min-h-cards rounded-lg bg-[url('img/vacation.jpg')] bg-cover">
+          <div class="grid grid-cols-subgrid gap-4 col-span-3 rounded-t-lg min-h-smCard">
+            <div class="my-8">
+              <h2 class="mx-auto font-xmas3 uppercase text-4xl text-green bg-whiteOp p-6 ">A Vacation</h2>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-gradient-to-br from-red to-rdGray p-6 min-h-cards rounded-lg">05</div>
+
+        <div class="bg-gradient-to-br from-red to-rdGray p-6 min-h-cards rounded-lg">06</div>
+
+        <div class="bg-gradient-to-br from-red to-rdGray p-6 min-h-cards rounded-lg">07</div>
+
+        <div class="bg-gradient-to-br from-red to-rdGray p-6 min-h-cards rounded-lg">08</div>
+
+        <div class="bg-gradient-to-br from-red to-rdGray p-6 min-h-cards rounded-lg">09</div>
         </div>
       </div>
     </main>
       
-    
+    <!--=============== CUSTOM JS ===============-->
+    <script src="script.js"></script>    
 
     <!--=============== SWIPER JS ===============-->
     <script src="assets/js/swiper-bundle.min.js"></script>
 </body>
 </html>
+
+
+<!-- <nav class="flex items-center justify-between flex-wrap bg-teal-500 p-6">
+  <div class="flex items-center flex-shrink-0 text-white mr-6">
+    <svg class="fill-current h-8 w-8 mr-2" width="54" height="54" viewBox="0 0 54 54" xmlns="http://www.w3.org/2000/svg"><path d="M13.5 22.1c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05zM0 38.3c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05z"/></svg>
+    <span class="font-semibold text-xl tracking-tight">Menu</span>
+  </div>
+  <div class="block lg:hidden">
+    <button class="flex items-center px-3 py-2 border rounded text-teal-200 border-teal-400 hover:text-white hover:border-white" id="show-menu">
+      <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
+    </button>
+  </div>
+  <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto mobile-menu">
+    <div class="text-sm lg:flex-grow">
+      <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
+        Docs
+      </a>
+      <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
+        Examples
+      </a>
+      <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white">
+        Blog
+      </a>
+    </div>
+    <div>
+      <a href="#" class="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0">Download</a>
+    </div>
+  </div>
+</nav> -->
