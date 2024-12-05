@@ -566,6 +566,10 @@ video {
   border-width: 0;
 }
 
+.visible {
+  visibility: visible;
+}
+
 .absolute {
   position: absolute;
 }
@@ -698,6 +702,18 @@ video {
   width: 100%;
 }
 
+.min-w-full {
+  min-width: 100%;
+}
+
+.min-w-64 {
+  min-width: 16rem;
+}
+
+.min-w-80 {
+  min-width: 20rem;
+}
+
 .max-w-7xl {
   max-width: 80rem;
 }
@@ -718,8 +734,16 @@ video {
   flex-grow: 1;
 }
 
+.transform {
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
 .grid-cols-subgrid {
   grid-template-columns: subgrid;
+}
+
+.flex-row {
+  flex-direction: row;
 }
 
 .flex-col {
@@ -783,9 +807,42 @@ video {
   border-width: 1px;
 }
 
+.border-y {
+  border-top-width: 1px;
+  border-bottom-width: 1px;
+}
+
+.border-y-4 {
+  border-top-width: 4px;
+  border-bottom-width: 4px;
+}
+
+.border-y-8 {
+  border-top-width: 8px;
+  border-bottom-width: 8px;
+}
+
+.border-b {
+  border-bottom-width: 1px;
+}
+
+.border-t-8 {
+  border-top-width: 8px;
+}
+
+.border-dkRed {
+  --tw-border-opacity: 1;
+  border-color: rgb(86 0 0 / var(--tw-border-opacity, 1));
+}
+
 .border-white {
   --tw-border-opacity: 1;
   border-color: rgb(255 255 255 / var(--tw-border-opacity, 1));
+}
+
+.border-dkGreen {
+  --tw-border-opacity: 1;
+  border-color: rgb(41 57 56 / var(--tw-border-opacity, 1));
 }
 
 .bg-green {
@@ -802,6 +859,11 @@ video {
   background-color: #ffffffbb;
 }
 
+.bg-dkRed {
+  --tw-bg-opacity: 1;
+  background-color: rgb(86 0 0 / var(--tw-bg-opacity, 1));
+}
+
 .bg-\[url\(\'img\/acoustic\.jpg\'\)\] {
   background-image: url('img/acoustic.jpg');
 }
@@ -814,8 +876,24 @@ video {
   background-image: url('img/cymbal.jpg');
 }
 
+.bg-\[url\(\'img\/dwLiveNYC\.jpg\'\)\] {
+  background-image: url('img/dwLiveNYC.jpg');
+}
+
+.bg-\[url\(\'img\/family\.jpg\'\)\] {
+  background-image: url('img/family.jpg');
+}
+
+.bg-\[url\(\'img\/friends\.jpg\'\)\] {
+  background-image: url('img/friends.jpg');
+}
+
 .bg-\[url\(\'img\/hero-index\.jpg\'\)\] {
   background-image: url('img/hero-index.jpg');
+}
+
+.bg-\[url\(\'img\/ourDogs\.jpg\'\)\] {
+  background-image: url('img/ourDogs.jpg');
 }
 
 .bg-\[url\(\'img\/skiing\.jpg\'\)\] {
@@ -830,32 +908,8 @@ video {
   background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
 }
 
-.bg-gradient-to-br {
-  background-image: linear-gradient(to bottom right, var(--tw-gradient-stops));
-}
-
 .bg-gradient-to-t {
   background-image: linear-gradient(to top, var(--tw-gradient-stops));
-}
-
-.bg-\[url\(\'img\/family\.jpg\'\)\] {
-  background-image: url('img/family.jpg');
-}
-
-.bg-\[url\(\'img\/friends\.jpg\'\)\] {
-  background-image: url('img/friends.jpg');
-}
-
-.bg-\[url\(\'img\/ourDogs\.jpg\'\)\] {
-  background-image: url('img/ourDogs.jpg');
-}
-
-.bg-\[url\(\'img\/dwLiveNY\.jpg\'\)\] {
-  background-image: url('img/dwLiveNY.jpg');
-}
-
-.bg-\[url\(\'img\/dwLiveNYC\.jpg\'\)\] {
-  background-image: url('img/dwLiveNYC.jpg');
 }
 
 .from-green {
@@ -876,10 +930,6 @@ video {
 
 .to-dkRed {
   --tw-gradient-to: #560000 var(--tw-gradient-to-position);
-}
-
-.to-rdGray {
-  --tw-gradient-to: #9A6767 var(--tw-gradient-to-position);
 }
 
 .bg-cover {
