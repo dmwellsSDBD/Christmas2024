@@ -578,10 +578,6 @@ video {
   inset: -0.125rem;
 }
 
-.-inset-1\.5 {
-  inset: -0.375rem;
-}
-
 .inset-y-0 {
   top: 0px;
   bottom: 0px;
@@ -633,10 +629,6 @@ video {
   display: inline-block;
 }
 
-.inline {
-  display: inline;
-}
-
 .flex {
   display: flex;
 }
@@ -671,7 +663,7 @@ video {
 }
 
 .min-h-cards {
-  min-height: 25rem;
+  min-height: 35rem;
 }
 
 .min-h-header {
@@ -680,6 +672,10 @@ video {
 
 .min-h-mobile {
   min-height: 15rem;
+}
+
+.min-h-section {
+  min-height: 25rem;
 }
 
 .min-h-smCard {
@@ -810,12 +806,24 @@ video {
   background-image: url('img/acoustic.jpg');
 }
 
+.bg-\[url\(\'img\/amp\.jpg\'\)\] {
+  background-image: url('img/amp.jpg');
+}
+
+.bg-\[url\(\'img\/cymbal\.jpg\'\)\] {
+  background-image: url('img/cymbal.jpg');
+}
+
 .bg-\[url\(\'img\/hero-index\.jpg\'\)\] {
   background-image: url('img/hero-index.jpg');
 }
 
-.bg-\[url\(\'img\/streetLight\.jpg\'\)\] {
-  background-image: url('img/streetLight.jpg');
+.bg-\[url\(\'img\/skiing\.jpg\'\)\] {
+  background-image: url('img/skiing.jpg');
+}
+
+.bg-\[url\(\'img\/vacation\.jpg\'\)\] {
+  background-image: url('img/vacation.jpg');
 }
 
 .bg-gradient-to-b {
@@ -830,16 +838,24 @@ video {
   background-image: linear-gradient(to top, var(--tw-gradient-stops));
 }
 
-.bg-\[url\(\'img\/amp\.jpg\'\)\] {
-  background-image: url('img/amp.jpg');
+.bg-\[url\(\'img\/family\.jpg\'\)\] {
+  background-image: url('img/family.jpg');
 }
 
-.bg-\[url\(\'img\/cy\.jpg\'\)\] {
-  background-image: url('img/cy.jpg');
+.bg-\[url\(\'img\/friends\.jpg\'\)\] {
+  background-image: url('img/friends.jpg');
 }
 
-.bg-\[url\(\'img\/cymbal\.jpg\'\)\] {
-  background-image: url('img/cymbal.jpg');
+.bg-\[url\(\'img\/ourDogs\.jpg\'\)\] {
+  background-image: url('img/ourDogs.jpg');
+}
+
+.bg-\[url\(\'img\/dwLiveNY\.jpg\'\)\] {
+  background-image: url('img/dwLiveNY.jpg');
+}
+
+.bg-\[url\(\'img\/dwLiveNYC\.jpg\'\)\] {
+  background-image: url('img/dwLiveNYC.jpg');
 }
 
 .from-green {
@@ -1009,6 +1025,11 @@ video {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+}
+
+.drop-shadow-2xl {
+  --tw-drop-shadow: drop-shadow(0 25px 25px rgb(0 0 0 / 0.15));
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
 .drop-shadow-lg {

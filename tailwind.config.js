@@ -16,7 +16,7 @@ module.exports = {
       'tablet': '20rem',
       'section': '25rem',
       'header': '40rem',
-      'cards': '25rem',
+      'cards': '35rem',
       'smCard': '10rem',
     },
     extend: {
