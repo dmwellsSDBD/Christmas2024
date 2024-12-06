@@ -12,6 +12,7 @@ module.exports = {
         'rdGray': '#9A6767'
     },
     minHeight: {
+      'spacer': '10rem',
       'mobile': '15rem',
       'tablet': '20rem',
       'section': '25rem',
