@@ -605,6 +605,14 @@ video {
   margin-bottom: 2rem;
 }
 
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
+.mb-6 {
+  margin-bottom: 1.5rem;
+}
+
 .mr-2 {
   margin-right: 0.5rem;
 }
@@ -619,14 +627,6 @@ video {
 
 .mt-4 {
   margin-top: 1rem;
-}
-
-.mb-4 {
-  margin-bottom: 1rem;
-}
-
-.mb-6 {
-  margin-bottom: 1.5rem;
 }
 
 .block {
@@ -666,12 +666,12 @@ video {
   height: 0.75rem;
 }
 
-.h-8 {
-  height: 2rem;
-}
-
 .h-4 {
   height: 1rem;
+}
+
+.h-8 {
+  height: 2rem;
 }
 
 .min-h-cards {
@@ -686,16 +686,16 @@ video {
   min-height: 15rem;
 }
 
-.min-h-section {
-  min-height: 25rem;
-}
-
 .min-h-smCard {
   min-height: 10rem;
 }
 
 .w-3 {
   width: 0.75rem;
+}
+
+.w-4 {
+  width: 1rem;
 }
 
 .w-8 {
@@ -710,12 +710,12 @@ video {
   width: 100%;
 }
 
-.w-4 {
-  width: 1rem;
-}
-
 .min-w-80 {
   min-width: 20rem;
+}
+
+.min-w-64 {
+  min-width: 16rem;
 }
 
 .max-w-7xl {
@@ -742,12 +742,12 @@ video {
   flex-grow: 1;
 }
 
-.grid-cols-subgrid {
-  grid-template-columns: subgrid;
-}
-
 .grid-cols-2 {
   grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.grid-cols-subgrid {
+  grid-template-columns: subgrid;
 }
 
 .flex-row {
@@ -760,6 +760,14 @@ video {
 
 .flex-wrap {
   flex-wrap: wrap;
+}
+
+.place-content-center {
+  place-content: center;
+}
+
+.place-items-center {
+  place-items: center;
 }
 
 .items-center {
@@ -792,16 +800,16 @@ video {
   margin-left: calc(1rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
-.space-y-1 > :not([hidden]) ~ :not([hidden]) {
-  --tw-space-y-reverse: 0;
-  margin-top: calc(0.25rem * calc(1 - var(--tw-space-y-reverse)));
-  margin-bottom: calc(0.25rem * var(--tw-space-y-reverse));
-}
-
 .space-x-5 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-x-reverse: 0;
   margin-right: calc(1.25rem * var(--tw-space-x-reverse));
   margin-left: calc(1.25rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
+.space-y-1 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(0.25rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(0.25rem * var(--tw-space-y-reverse));
 }
 
 .rounded {
@@ -825,12 +833,24 @@ video {
   border-top-right-radius: 0.5rem;
 }
 
-.border {
-  border-width: 1px;
+.rounded-tr-lg {
+  border-top-right-radius: 0.5rem;
 }
 
-.border-t-8 {
-  border-top-width: 8px;
+.rounded-bl-lg {
+  border-bottom-left-radius: 0.5rem;
+}
+
+.rounded-tl-lg {
+  border-top-left-radius: 0.5rem;
+}
+
+.rounded-br-lg {
+  border-bottom-right-radius: 0.5rem;
+}
+
+.border {
+  border-width: 1px;
 }
 
 .border-dkGreen {
@@ -838,19 +858,9 @@ video {
   border-color: rgb(41 57 56 / var(--tw-border-opacity, 1));
 }
 
-.border-dkRed {
-  --tw-border-opacity: 1;
-  border-color: rgb(86 0 0 / var(--tw-border-opacity, 1));
-}
-
 .border-white {
   --tw-border-opacity: 1;
   border-color: rgb(255 255 255 / var(--tw-border-opacity, 1));
-}
-
-.bg-dkRed {
-  --tw-bg-opacity: 1;
-  background-color: rgb(86 0 0 / var(--tw-bg-opacity, 1));
 }
 
 .bg-green {
@@ -865,6 +875,11 @@ video {
 
 .bg-whiteOp {
   background-color: #ffffffbb;
+}
+
+.bg-red {
+  --tw-bg-opacity: 1;
+  background-color: rgb(128 0 0 / var(--tw-bg-opacity, 1));
 }
 
 .bg-\[url\(\'img\/acoustic\.jpg\'\)\] {
@@ -996,6 +1011,16 @@ video {
   padding-bottom: 1.5rem;
 }
 
+.py-8 {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.py-4 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
 .pb-3 {
   padding-bottom: 0.75rem;
 }
@@ -1006,6 +1031,10 @@ video {
 
 .pt-2 {
   padding-top: 0.5rem;
+}
+
+.text-center {
+  text-align: center;
 }
 
 .font-xmas1 {
@@ -1111,6 +1140,18 @@ video {
   transition-duration: 300ms;
 }
 
+.hover\:rounded-none:hover {
+  border-radius: 0px;
+}
+
+.hover\:rounded-tr-lg:hover {
+  border-top-right-radius: 0.5rem;
+}
+
+.hover\:rounded-bl-lg:hover {
+  border-bottom-left-radius: 0.5rem;
+}
+
 .hover\:border-white:hover {
   --tw-border-opacity: 1;
   border-color: rgb(255 255 255 / var(--tw-border-opacity, 1));
@@ -1124,6 +1165,11 @@ video {
 .hover\:bg-white:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
+}
+
+.hover\:bg-green:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(74 129 123 / var(--tw-bg-opacity, 1));
 }
 
 .hover\:text-dkGreen:hover {
@@ -1244,12 +1290,20 @@ video {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
+  .md\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
   .md\:items-center {
     align-items: center;
   }
 
   .md\:justify-between {
     justify-content: space-between;
+  }
+
+  .md\:justify-around {
+    justify-content: space-around;
   }
 }
 
