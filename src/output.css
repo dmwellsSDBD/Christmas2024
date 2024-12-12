@@ -591,8 +591,21 @@ video {
   right: 0px;
 }
 
+.col-span-2 {
+  grid-column: span 2 / span 2;
+}
+
 .col-span-3 {
   grid-column: span 3 / span 3;
+}
+
+.row-span-2 {
+  grid-row: span 2 / span 2;
+}
+
+.mx-8 {
+  margin-left: 2rem;
+  margin-right: 2rem;
 }
 
 .mx-auto {
@@ -674,6 +687,10 @@ video {
   height: 2rem;
 }
 
+.max-h-3 {
+  max-height: 0.75rem;
+}
+
 .min-h-cards {
   min-height: 35rem;
 }
@@ -712,10 +729,6 @@ video {
 
 .min-w-80 {
   min-width: 20rem;
-}
-
-.min-w-64 {
-  min-width: 16rem;
 }
 
 .max-w-7xl {
@@ -833,20 +846,12 @@ video {
   border-top-right-radius: 0.5rem;
 }
 
-.rounded-tr-lg {
-  border-top-right-radius: 0.5rem;
-}
-
-.rounded-bl-lg {
-  border-bottom-left-radius: 0.5rem;
+.rounded-br-lg {
+  border-bottom-right-radius: 0.5rem;
 }
 
 .rounded-tl-lg {
   border-top-left-radius: 0.5rem;
-}
-
-.rounded-br-lg {
-  border-bottom-right-radius: 0.5rem;
 }
 
 .border {
@@ -863,9 +868,24 @@ video {
   border-color: rgb(255 255 255 / var(--tw-border-opacity, 1));
 }
 
+.bg-dkGreen {
+  --tw-bg-opacity: 1;
+  background-color: rgb(41 57 56 / var(--tw-bg-opacity, 1));
+}
+
+.bg-dkRed {
+  --tw-bg-opacity: 1;
+  background-color: rgb(86 0 0 / var(--tw-bg-opacity, 1));
+}
+
 .bg-green {
   --tw-bg-opacity: 1;
   background-color: rgb(74 129 123 / var(--tw-bg-opacity, 1));
+}
+
+.bg-red {
+  --tw-bg-opacity: 1;
+  background-color: rgb(128 0 0 / var(--tw-bg-opacity, 1));
 }
 
 .bg-white {
@@ -875,11 +895,6 @@ video {
 
 .bg-whiteOp {
   background-color: #ffffffbb;
-}
-
-.bg-red {
-  --tw-bg-opacity: 1;
-  background-color: rgb(128 0 0 / var(--tw-bg-opacity, 1));
 }
 
 .bg-\[url\(\'img\/acoustic\.jpg\'\)\] {
@@ -1011,16 +1026,6 @@ video {
   padding-bottom: 1.5rem;
 }
 
-.py-8 {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-}
-
-.py-4 {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-}
-
 .pb-3 {
   padding-bottom: 0.75rem;
 }
@@ -1114,6 +1119,12 @@ video {
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
 }
 
+.shadow-xl {
+  --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
 .drop-shadow-2xl {
   --tw-drop-shadow: drop-shadow(0 25px 25px rgb(0 0 0 / 0.15));
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
@@ -1144,14 +1155,6 @@ video {
   border-radius: 0px;
 }
 
-.hover\:rounded-tr-lg:hover {
-  border-top-right-radius: 0.5rem;
-}
-
-.hover\:rounded-bl-lg:hover {
-  border-bottom-left-radius: 0.5rem;
-}
-
 .hover\:border-white:hover {
   --tw-border-opacity: 1;
   border-color: rgb(255 255 255 / var(--tw-border-opacity, 1));
@@ -1162,14 +1165,14 @@ video {
   background-color: rgb(41 57 56 / var(--tw-bg-opacity, 1));
 }
 
-.hover\:bg-white:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
-}
-
 .hover\:bg-green:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(74 129 123 / var(--tw-bg-opacity, 1));
+}
+
+.hover\:bg-white:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
 }
 
 .hover\:text-dkGreen:hover {
@@ -1241,6 +1244,10 @@ video {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .sm\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
   .sm\:items-stretch {
     align-items: stretch;
   }
@@ -1286,20 +1293,12 @@ video {
     display: flex;
   }
 
-  .md\:grid-cols-4 {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-  }
-
   .md\:grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .md\:items-center {
     align-items: center;
-  }
-
-  .md\:justify-between {
-    justify-content: space-between;
   }
 
   .md\:justify-around {
@@ -1338,6 +1337,10 @@ video {
 
   .lg\:grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .lg\:grid-cols-6 {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
   }
 
   .lg\:items-center {
