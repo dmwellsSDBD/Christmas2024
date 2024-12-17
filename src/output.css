@@ -984,6 +984,10 @@ video {
   background-image: linear-gradient(to top, var(--tw-gradient-stops));
 }
 
+.bg-\[url\(\'img\/acousticx\.jpg\'\)\] {
+  background-image: url('img/acousticx.jpg');
+}
+
 .from-green {
   --tw-gradient-from: #4A817B var(--tw-gradient-from-position);
   --tw-gradient-to: rgb(74 129 123 / 0) var(--tw-gradient-to-position);
