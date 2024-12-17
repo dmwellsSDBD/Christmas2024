@@ -17,7 +17,7 @@
   <link href="./output.css" rel="stylesheet">
 </head>
 <body>
-    <nav class="bg-gradient-to-b from-red to-dkRed">
+  <nav class="sticky top-0 bg-gradient-to-b from-red to-dkRed z-40">
         <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
           <div class="relative flex h-24 items-center justify-between">
             <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
@@ -59,23 +59,25 @@
               </div> -->
               <div class="hidden sm:ml-6 sm:block">
                 <div class="flex space-x-4">
-                  <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-                  <a href="index.html" class="rounded-full px-3 py-2 text-xl font-bold hover:bg-dkGreen bg-white hover:border-2-white" aria-current="page">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6 text-green hover:text-white">
-                      <path d="M9.375 3a1.875 1.875 0 0 0 0 3.75h1.875v4.5H3.375A1.875 1.875 0 0 1 1.5 9.375v-.75c0-1.036.84-1.875 1.875-1.875h3.193A3.375 3.375 0 0 1 12 2.753a3.375 3.375 0 0 1 5.432 3.997h3.943c1.035 0 1.875.84 1.875 1.875v.75c0 1.036-.84 1.875-1.875 1.875H12.75v-4.5h1.875a1.875 1.875 0 1 0-1.875-1.875V6.75h-1.5V4.875C11.25 3.839 10.41 3 9.375 3ZM11.25 12.75H3v6.75a2.25 2.25 0 0 0 2.25 2.25h6v-9ZM12.75 12.75v9h6.75a2.25 2.25 0 0 0 2.25-2.25v-6.75h-9Z" />
-                    </svg>
+                  <a href="index.html">
+                    <button type="button" class="relative rounded-full ease-in duration-500 bg-dkGreen text-white hover:bg-white hover:text-green p-3">
+                      <span class="font-xmas3 text-lg p-5 rounded-full font-bold">
+                        <i class="fa-solid fa-gifts"></i> Home
+                      </span>
+                      
+                    </button>
                   </a>
-                  <a href="#" class="rounded-md px-3 py-2 text-lg font-bold text-white hover:bg-gray-700 hover:text-green hover:bg-white active:text-red">Music Gear</a>
-                  <a href="#" class="rounded-md px-3 py-2 text-lg font-bold text-white hover:bg-gray-700 hover:text-green hover:bg-white active:text-red">Vacations</a>
-                  <a href="#" class="rounded-md px-3 py-2 text-lg font-bold text-white hover:bg-gray-700 hover:text-green hover:bg-white active:text-red">Priceless</a>
+                  <a href="#" class="rounded-full p-3 self-center text-lg font-bold text-white hover:bg-gray-700 hover:text-green hover:bg-white active:text-red ease-in duration-500">Music Gear</a>
+                  <a href="#" class="rounded-full p-3 self-center text-lg font-bold text-white hover:bg-gray-700 hover:text-green hover:bg-white active:text-red ease-in duration-500">Vacations</a>
+                  <a href="#" class="rounded-full p-3 self-center text-lg font-bold text-white hover:bg-gray-700 hover:text-green hover:bg-white active:text-red ease-in duration-500">Priceless</a>
                 </div>
               </div>
             </div>
             <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
               <a href="https://santatracker.google.com/" target="_blank">
-                <button type="button" class="relative rounded-full bg-white hover:bg-dkGreen p-3">
+                <button type="button" class="relative rounded-full bg-white hover:bg-dkGreen p-3 ease-in duration-500">
                   <span class="font-xmas3 text-lg text-green hover:text-white p-5 rounded-full font-bold">
-                    Santa Tracker <i class="fa-solid fa-sleigh text-green"></i>
+                    Santa Tracker <i class="fa-solid fa-sleigh"></i>
                   </span>
                   
                 </button>
@@ -89,10 +91,10 @@
         <div class="hidden sm:hidden mobile-menu" id="mobile-menu">
           <div class="space-y-1 px-2 pb-3 pt-2">
             <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-            <a href="index.html" class="block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white hover:text-green" aria-current="page">Home</a>
-            <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-white hover:bg-gray-700 hover:text-green">Music Gear</a>
-            <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-white hover:bg-gray-700 hover:text-green">Vacations</a>
-            <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-white hover:bg-gray-700 hover:text-green">Priceless</a>
+            <a href="index.html" class="block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white hover:text-green hover:bg-white ease-in duration-500" aria-current="page">Home</a>
+            <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-white hover:bg-white hover:text-green ease-in duration-500">Music Gear</a>
+            <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-white hover:bg-white hover:text-green ease-in duration-500">Vacations</a>
+            <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-white hover:bg-white hover:text-green ease-in duration-500">Priceless</a>
           </div>
         </div>
       </nav>
@@ -120,7 +122,7 @@
             <!-- Item Button -->
             <div class="">
               <a href="item1.html">
-                <button type="button" class="absolute bottom-5 right-5 rounded-full bg-white hover:bg-dkGreen p-3">
+                <button type="button" class="absolute bottom-5 right-5 rounded-full bg-white hover:bg-dkGreen p-3 ease-in duration-500">
                   <span class="font-xmas3 text-lg text-green hover:text-white p-5 rounded-full font-bold">
                     Read More
                   </span>
@@ -140,7 +142,7 @@
             <!-- Item Button -->
             <div class="">
               <a href="item2.html">
-                <button type="button" class="absolute bottom-5 right-5 rounded-full bg-white hover:bg-dkGreen p-3">
+                <button type="button" class="absolute bottom-5 right-5 rounded-full bg-white hover:bg-dkGreen p-3 ease-in duration-500">
                   <span class="font-xmas3 text-lg text-green hover:text-white p-5 rounded-full font-bold">
                     Read More
                   </span>
@@ -160,7 +162,7 @@
             <!-- Item Button -->
             <div class="">
               <a href="item3.html">
-                <button type="button" class="absolute bottom-5 right-5 rounded-full bg-white hover:bg-dkGreen p-3">
+                <button type="button" class="absolute bottom-5 right-5 rounded-full bg-white hover:bg-dkGreen p-3 ease-in duration-500">
                   <span class="font-xmas3 text-lg text-green hover:text-white p-5 rounded-full font-bold">
                     Read More
                   </span>
@@ -180,7 +182,7 @@
             <!-- Item Button -->
             <div class="">
               <a href="item4.html">
-                <button type="button" class="absolute bottom-5 right-5 rounded-full bg-white hover:bg-dkGreen p-3">
+                <button type="button" class="absolute bottom-5 right-5 rounded-full bg-white hover:bg-dkGreen p-3 ease-in duration-500">
                   <span class="font-xmas3 text-lg text-green hover:text-white p-5 rounded-full font-bold">
                     Read More
                   </span>
@@ -200,7 +202,7 @@
             <!-- Item Button -->
             <div class="">
               <a href="item5.html">
-                <button type="button" class="absolute bottom-5 right-5 rounded-full bg-white hover:bg-dkGreen p-3">
+                <button type="button" class="absolute bottom-5 right-5 rounded-full bg-white hover:bg-dkGreen p-3 ease-in duration-500">
                   <span class="font-xmas3 text-lg text-green hover:text-white p-5 rounded-full font-bold">
                     Read More
                   </span>
@@ -220,7 +222,7 @@
             <!-- Item Button -->
             <div class="">
               <a href="item6.html">
-                <button type="button" class="absolute bottom-5 right-5 rounded-full bg-white hover:bg-dkGreen p-3">
+                <button type="button" class="absolute bottom-5 right-5 rounded-full bg-white hover:bg-dkGreen p-3 ease-in duration-500">
                   <span class="font-xmas3 text-lg text-green hover:text-white p-5 rounded-full font-bold">
                     Read More
                   </span>
@@ -240,7 +242,7 @@
             <!-- Item Button -->
             <div class="">
               <a href="item7.html">
-                <button type="button" class="absolute bottom-5 right-5 rounded-full bg-white hover:bg-dkGreen p-3">
+                <button type="button" class="absolute bottom-5 right-5 rounded-full bg-white hover:bg-dkGreen p-3 ease-in duration-500">
                   <span class="font-xmas3 text-lg text-green hover:text-white p-5 rounded-full font-bold">
                     Read More
                   </span>
@@ -260,7 +262,7 @@
             <!-- Item Button -->
             <div class="">
               <a href="item8.html">
-                <button type="button" class="absolute bottom-5 right-5 rounded-full bg-white hover:bg-dkGreen p-3">
+                <button type="button" class="absolute bottom-5 right-5 rounded-full bg-white hover:bg-dkGreen p-3 ease-in duration-500">
                   <span class="font-xmas3 text-lg text-green hover:text-white p-5 rounded-full font-bold">
                     Read More
                   </span>
@@ -280,7 +282,7 @@
             <!-- Item Button -->
             <div class="">
               <a href="item9.html">
-                <button type="button" class="absolute bottom-5 right-5 rounded-full bg-white hover:bg-dkGreen p-3">
+                <button type="button" class="absolute bottom-5 right-5 rounded-full bg-white hover:bg-dkGreen p-3 ease-in duration-500">
                   <span class="font-xmas3 text-lg text-green hover:text-white p-5 rounded-full font-bold">
                     Read More
                   </span>
