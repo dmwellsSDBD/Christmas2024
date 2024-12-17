@@ -591,12 +591,28 @@ video {
   right: 0px;
 }
 
+.bottom-0 {
+  bottom: 0px;
+}
+
+.bottom-5 {
+  bottom: 1.25rem;
+}
+
+.right-5 {
+  right: 1.25rem;
+}
+
 .col-span-2 {
   grid-column: span 2 / span 2;
 }
 
 .col-span-3 {
   grid-column: span 3 / span 3;
+}
+
+.col-span-6 {
+  grid-column: span 6 / span 6;
 }
 
 .row-span-2 {
@@ -640,6 +656,10 @@ video {
 
 .mt-4 {
   margin-top: 1rem;
+}
+
+.mb-0 {
+  margin-bottom: 0px;
 }
 
 .block {
@@ -777,10 +797,6 @@ video {
 
 .place-content-center {
   place-content: center;
-}
-
-.place-items-center {
-  place-items: center;
 }
 
 .items-center {
@@ -945,6 +961,18 @@ video {
   background-image: linear-gradient(to top, var(--tw-gradient-stops));
 }
 
+.bg-\[url\(\)\] {
+  background-image: url();
+}
+
+.bg-\[url\(\'img\/christmasCandle\.jpg\'\)\] {
+  background-image: url('img/christmasCandle.jpg');
+}
+
+.bg-\[url\(\'img\/streetLight\.jpg\'\)\] {
+  background-image: url('img/streetLight.jpg');
+}
+
 .from-green {
   --tw-gradient-from: #4A817B var(--tw-gradient-from-position);
   --tw-gradient-to: rgb(74 129 123 / 0) var(--tw-gradient-to-position);
@@ -1024,6 +1052,11 @@ video {
 .py-6 {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
+}
+
+.px-6 {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
 }
 
 .pb-3 {
@@ -1117,6 +1150,11 @@ video {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+}
+
+.text-dkRed {
+  --tw-text-opacity: 1;
+  color: rgb(86 0 0 / var(--tw-text-opacity, 1));
 }
 
 .shadow-xl {
